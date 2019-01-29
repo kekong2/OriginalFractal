@@ -1,17 +1,21 @@
 public void setup()
 {
-	size(500, 500)
+	size(500, 500);
 }
 
 public void draw()
 {
-	fractal();
+	fractal(250, 250, 250);
 }
 
-public void fractal(int x, int y)
+public void fractal(int x, int y, int z)
 {
-	if()
+	ellipse(x, y, z, z);
+	if(z < 20)
 	{
-
+		
+	}else{
+		fractal(x - 20, y, z - 20);
+		fractal(x + 20, y, z - 20);
 	}
 }
